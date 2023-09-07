@@ -1,0 +1,50 @@
+swagger: '2.0'
+info:
+  title: apigateway
+  description: API for creating notifications
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /create_notification:
+    post:
+      summary: Create notification
+      operationId: createNotification
+      parameters:
+        - in: body
+          name: requestBody
+          description: Request body for creating a notification
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Title of the notification
+              body:
+                type: string
+                description: Body of the notification
+              userIds:
+                type: array
+                items:
+                  type: integer
+                description: List of user IDs who will receive the notification
+            required:
+              - title
+              - body
+              - userIds
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+      x-google-backend:
+        address: https://us-central1-trivia-game-5410.cloudfunctions.net/TeamSetData
+        protocol: h2
+      # Add CORS configuration here
+      x-google-allow: all  # Change "all" to specific origins if needed

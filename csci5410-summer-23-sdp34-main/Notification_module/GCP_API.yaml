@@ -1,0 +1,62 @@
+swagger: '2.0'
+info:
+  title: apigateways
+  description: API for retrieving notifications
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /get_team_invite_notification:
+    get:
+      summary: Get notification
+      operationId: getNotification
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          type: integer
+          description: User ID
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+      x-google-backend:
+        address: https://us-central1-trivia-game-5410.cloudfunctions.net/PollTeamInvite
+        protocol: h2
+      # Add CORS configuration here
+      x-google-allow: all  
+
+  /leaderboard_request:
+    get:
+      summary: Get leaderboard notification
+      operationId: getleadeboardNotification
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          type: integer
+          description: User ID
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              result:
+                type: string
+      x-google-backend:
+        address: https://us-central1-trivia-game-5410.cloudfunctions.net/SendLeaderBoardNotification
+        protocol: h2
+      # Add CORS configuration here
+      x-google-allow: all  
+
+
+
+
+

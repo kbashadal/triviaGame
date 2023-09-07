@@ -1,0 +1,27 @@
+/* styles.css or your preferred stylesheet */
+
+.play-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+  justify-content: center; /* Horizontally center the cards within the container */
+}
+
+/* Optional: If you want some space between the cards */
+.play-card {
+  display: flex;
+  flex-direction: column; /* Display game name and description vertically */
+  align-items: center; /* Center the content horizontally */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  max-width: 300px; /* Adjust the size based on your preference */
+}
+
+.game-name-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* Add other styles for the heading as needed */
+}

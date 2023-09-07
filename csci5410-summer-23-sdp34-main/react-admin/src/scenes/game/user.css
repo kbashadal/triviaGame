@@ -1,0 +1,17 @@
+/* styles.css or your preferred stylesheet */
+
+.play-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  /* Add other styles as needed */
+}
+
+.game-name-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* Add other styles for the heading as needed */
+}

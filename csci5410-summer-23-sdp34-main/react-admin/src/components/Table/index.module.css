@@ -1,0 +1,58 @@
+.tableContainer {
+  width: 100%;
+  background-color: #F0F0F0;
+  background-size: cover;
+}
+
+.table {
+  width: 100%;
+  color: black;
+}
+
+.tableHeaderRow {
+  background-color: #eaeaea;
+}
+
+.tableHeaderCell {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-weight: bold;
+  color: #555;
+}
+
+.tableBodyRow {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.tableBodyCell {
+  color: rgb(12, 12, 12);
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination .currentPage {
+  font-weight: bold;
+}
